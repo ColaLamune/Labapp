@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8lwd9$+by@dp_=o=y2y)@w&x4#&736gdk!by25**r!do!x-9bj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["labratoryinfoapp.herokuapp.com"]
-
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ["labratoryinfoapp.herokuapp.com"]
 
 # Application definition
 
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'labapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

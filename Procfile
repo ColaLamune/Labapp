@@ -1,1 +1,1 @@
-web: gunicorn labapp.wsgi
+web: gunicorn labapp.wsgi --log-file -

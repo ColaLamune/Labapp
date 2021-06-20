@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-8lwd9$+by@dp_=o=y2y)@w&x4#&736gdk!by25**r!do!x-9bj
 DEBUG = False
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ["labratoryinfoapp.herokuapp.com"]
 
 # Application definition
 
@@ -45,13 +45,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+
 ]
 
 ROOT_URLCONF = 'labapp.urls'
